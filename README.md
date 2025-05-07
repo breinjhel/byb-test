@@ -19,6 +19,15 @@ The solution uses a token-based approach to secure the download links:
    - Verifies the user has permission to access the requested file
    - Serves the PDF if all checks pass, or returns an appropriate error
 
+## Security Features
+
+Token-based Authentication: Uses JWT tokens to validate download requests
+Time-limited Access: Download links automatically expire after a configurable period (default 24 hours)
+Single-use Links: Each download link can only be used once
+IP Tracking: Records the IP address of download attempts for security monitoring
+Rate Limiting: Prevents abuse through request rate limiting
+Error Handling: Shows appropriate errors for invalid download attempts
+
 ## Technology Stack
 
 - **Backend**: Node.js with Express
